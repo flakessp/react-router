@@ -11,6 +11,7 @@ import NotFound from './components/NotFound';
 
 import CourseContainer from './components/courses/CourseContainer';
 import CourseList from './data/courses';
+import Featured from './components/Featured';
 
 // Routes
 
@@ -27,7 +28,8 @@ const Routes = (
         <Route path="css" component={CourseContainer} data={CourseList.CSS}/>
         <Route path="javascript" component={CourseContainer} data={CourseList.JS}/>
       </Route>
-      <Route path="*"  component={NotFound}/>
+      <Route path="featured/:topic/:name" component={Featured}/>
+      <Route path="*" component={NotFound}/>
     </Route>
   </Router>
 );
